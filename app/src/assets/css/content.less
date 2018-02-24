@@ -1,0 +1,85 @@
+.content {
+  background: @color-f2;
+  padding: 0 15px;
+  margin-top: -20px;
+  .content-title {
+    font-size: 17px;
+    padding-top: 20px;
+  }
+  .mint-cell-wrapper {
+    background-image: none;
+    border-bottom: solid 1px @color-f1;
+    padding: 0;
+    min-height: 60px;
+  }
+  .mint-field .mint-cell-title {
+    width: 80px;
+  }
+  .mint-field-core {
+    margin-top: 5px;
+    line-height: 20px;
+    color: @color-b1;
+  }
+
+  .is-textarea .mint-cell-wrapper {
+    border: none !important;
+
+  }
+  .is-textarea .mint-field-core {
+    margin-top: 15px;
+  }
+  .is-textarea .mint-cell-title {
+    margin-top: -130px;
+  }
+  .length {
+    color: @color-b2;
+    padding-bottom: 10px;
+    line-height: 30px;
+    text-align: right;
+  }
+  .grey .mint-cell-text {
+    color: @color-b2;
+  }
+}
+
+/*** 底部按钮 ***/
+.sub-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  .mint-button--primary {
+    background: @color-primary;
+    border-radius: 0;
+    height: 50px;
+    .mint-button-text {
+      color: @color-f2;
+      font-size: 15px;
+
+    }
+  }
+  &.sub-btns {
+    &:after {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      background: @color-f0;
+      content: '';
+    }
+    .mint-button--primary {
+      display: block;
+      width: 50%;
+      float: left;
+    }
+  }
+}
+
+.up-img {
+  > h3 {
+    height: 60px;
+    line-height: 60px;
+    font-weight: lighter;
+  }
+}
