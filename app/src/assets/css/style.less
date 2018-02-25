@@ -14,7 +14,7 @@
 }
 
 a {
-  color: @color-b0;
+  color: @color-0;
 }
 
 body, html, #app {
@@ -72,20 +72,13 @@ img {
   }
 }
 
-.bg-f1 {
-  background: @color-f1
-}
-
-.bg-f2 {
-  background: @color-f2
-}
 
 .shadow {
   box-shadow: 0 0 20px 1px @color-f1;
 }
 
 .shadow-b {
-  box-shadow: 0 4px 10px 0px @color-f1;
+  box-shadow: 0 4px 10px 0 @color-f1;
 }
 
 .ellipsis {
@@ -94,27 +87,17 @@ img {
   text-overflow: ellipsis;
 }
 
-.text-success {
-  color: @color-success !important;
-}
-
-.text-primary {
-  color: @color-primary !important;
-}
-
 .w100 {
   width: 100%;
 }
 
 .h100 {
   min-height: 100%;
-  padding-top: 70px;
+
 }
 
-.text-danger {
-  color: @color-danger !important;
-}
+
 
 @import "common";
 @import "index";
-
+@import "integral";
