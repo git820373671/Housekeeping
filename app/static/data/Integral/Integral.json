@@ -1,0 +1,44 @@
+{
+  "code": "1",
+  "result": {
+    "success": true,
+    "sum": "1000",
+    "listData": [
+      {
+        "id": "111",
+        "photoSrc": "/static/data/img/img1.jpg",
+        "title": "橙色羊毛针织围巾帽子套装",
+        "gold": "800",
+        "price": "140.00"
+      },
+      {
+        "id": "101",
+        "photoSrc": "/static/data/img/img1.jpg",
+        "title": "橙色羊毛针织围巾帽子套装",
+        "gold": "800",
+        "price": "140.00"
+      },
+      {
+        "id": "131",
+        "photoSrc": "/static/data/img/img1.jpg",
+        "title": "橙色羊毛针织围巾帽子套装",
+        "gold": "800",
+        "price": "140.00"
+      },
+      {
+        "id": "121",
+        "photoSrc": "/static/data/img/img1.jpg",
+        "title": "橙色羊毛针织围巾帽子套装",
+        "gold": "800",
+        "price": "140.00"
+      },
+      {
+        "id": "135",
+        "photoSrc": "/static/data/img/img1.jpg",
+        "title": "橙色羊毛针织围巾帽子套装",
+        "gold": "800",
+        "price": "140.00"
+      }
+    ]
+  }
+}
