@@ -2,5 +2,27 @@
   position: relative;
   width: 90px;
   height: 25px;
-
+  .icon {
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    top: 0;
+    text-align: center;
+    &.reduce {
+      left: 0;
+    }
+    &.add {
+      right: 0;
+    }
+    > img {
+      height: 25px;
+    }
+  }
+  .box {
+    width: 30px;
+    height: 25px;
+    margin: 0 auto;
+    border: solid 1px @color-e5;
+    box-sizing: border-box;
+  }
 }
