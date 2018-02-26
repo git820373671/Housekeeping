@@ -16,15 +16,15 @@ export default new Router({
       path: '/',
       name: 'Index',
       component: Index
-    },{
+    }, {
       path: '/integral/integral',
       name: 'Integral',
       component: Integral
-    },{
+    }, {
       path: '/integral/exchange',
       name: 'IntegralExchange',
       component: IntegralExchange
-    },{
+    }, {
       path: '/integral/detail/:id',
       name: 'IntegralDetail',
       component: IntegralDetail

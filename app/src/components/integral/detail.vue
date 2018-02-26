@@ -21,7 +21,8 @@
     },
     data: function () {
       return {
-        sum: '', data: {},
+        sum: '',
+        data: {},
         numData: {
           maxVal: 100,
           minVal: 0,
@@ -38,6 +39,6 @@
         $this.data = data.data
         $this.sum = data.sum
       })
-    },
+    }
   }
 </script>

@@ -30,6 +30,6 @@
         $this.listData = data.listData
         $this.sum = data.sum
       })
-    },
+    }
   }
 </script>
