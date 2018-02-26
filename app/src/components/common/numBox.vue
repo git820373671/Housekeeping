@@ -1,7 +1,8 @@
 <template>
   <div class="num-box">
     <div class="icon reduce">-</div>
-    <input value="numData.val" class="box"/>
+
+    <input type="number" v-model="numData.val" class="box">
     <div class="icon add">+</div>
   </div>
 </template>

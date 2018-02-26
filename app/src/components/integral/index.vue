@@ -7,7 +7,7 @@
           <img :src="item.photoSrc" class="photo"/>
           <h3 class="title">{{item.title}}</h3>
           <div class="price">
-            <img src="../../assets/images/gold.png"/>{{item.gold}}+{{item.price}}元
+            <img src="../../assets/images/gold.png"/>{{item.gold}}+<span>{{item.price}}</span>元
           </div>
         </router-link>
       </li>
