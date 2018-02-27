@@ -17,7 +17,10 @@ import ConvenienceRelease2 from '../components/convenience/release2.vue'
 import ConvenienceRelease3 from '../components/convenience/release3.vue'
 /* 保洁 */
 import Cleaning from '../components/cleaning/index.vue'
-
+import SmallClassification from '../components/cleaning/smallClassification.vue'
+import AllClassification from '../components/cleaning/allClassification.vue'
+import Sort from '../components/cleaning/sort.vue'
+import SubNanny from '../components/cleaning/submitNanny.vue'
 Vue.use(Router)
 Vue.use(Resource)
 
@@ -74,5 +77,26 @@ export default new Router({
       path: '/cleaning/index',
       name: 'Cleaning',
       component: Cleaning
-    }]
+    },
+    {
+      path: '/cleaning/smallClassification/:id',
+      name: 'SmallClassification',
+      component: SmallClassification
+    },
+    {
+      path: '/cleaning/allClassification',
+      name: 'AllClassification',
+      component: AllClassification
+    },
+    {
+      path: '/cleaning/sort',
+      name: 'Sort',
+      component: Sort
+    },
+    {
+      path: '/cleaning/subNanny/:id',
+      name: 'SubNanny',
+      component: SubNanny
+    }
+  ]
 })

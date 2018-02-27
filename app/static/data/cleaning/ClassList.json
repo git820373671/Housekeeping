@@ -1,0 +1,65 @@
+{
+  "code": "1",
+  "result": {
+    "success": true,
+    "listData": [
+      {
+        "id": "111",
+        "title": "热门推荐",
+        "list": [
+          {
+            "id": "123",
+            "title": "家速洁",
+            "src": "/static/data/img/img1.jpg"
+          },
+          {
+            "id": "123",
+            "title": "家速洁",
+            "src": "/static/data/img/img2.png"
+          },
+          {
+            "id": "123",
+            "title": "家速洁",
+            "src": "/static/data/img/img3.png"
+          },
+          {
+            "id": "123",
+            "title": "家速洁",
+            "src": "/static/data/img/img4.png"
+          },
+          {
+            "id": "123",
+            "title": "家速洁",
+            "src": "/static/data/img/img5.png"
+          }
+        ]
+      },
+      {
+        "id": "111",
+        "title": "家电清洗",
+        "list": [
+          {
+            "id": "123",
+            "title": "家速洁",
+            "src": "/static/data/img/img4.png"
+          },
+          {
+            "id": "123",
+            "title": "家速洁",
+            "src": "/static/data/img/img2.png"
+          },
+          {
+            "id": "123",
+            "title": "家速洁",
+            "src": "/static/data/img/img3.png"
+          },
+          {
+            "id": "123",
+            "title": "家速洁",
+            "src": "/static/data/img/img5.png"
+          }
+        ]
+      }
+    ]
+  }
+}

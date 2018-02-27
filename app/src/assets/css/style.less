@@ -48,8 +48,12 @@ img {
   float: right;
 }
 
-.m-t-20 {
-  margin-top: 20px;
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
 }
 
 .m-t-5 {
@@ -78,11 +82,17 @@ img {
 }
 
 .shadow {
-  box-shadow: 0 0 20px 1px @color-f1;
+  box-shadow: 0 1px 2px 0px @color-f5;
 }
 
-.shadow-b {
-  box-shadow: 0 4px 10px 0 @color-f1;
+.model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background: @mask-b-3;
 }
 
 .ellipsis {
@@ -105,3 +115,4 @@ img {
 @import "index";
 @import "integral";
 @import "convenience";
+@import "cleaning";

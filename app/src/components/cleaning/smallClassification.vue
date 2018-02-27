@@ -1,13 +1,90 @@
 <template>
-    <div>
+  <div class="h100 cleaning">
+    <div class="banner">
+      <img src="../../assets/images/cleaning/sm-banner.png">
     </div>
+    <div class="panel">
+      <ul class="list-top clear">
+        <li>
+          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+            <img src="../../assets/images/cleaning/sm-1.png"/>
+            日常保洁
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+            <img src="../../assets/images/cleaning/sm-2.png"/>
+            深度保洁
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+            <img src="../../assets/images/cleaning/sm-3.png"/>
+            新房开荒
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+            <img src="../../assets/images/cleaning/sm-4.png"/>
+            擦玻璃
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+            <img src="../../assets/images/cleaning/sm-5.png"/>
+            清尘除螨
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+            <img src="../../assets/images/cleaning/sm-6.png"/>
+            空调清洗
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+            <img src="../../assets/images/cleaning/sm-7.png"/>
+            油烟机清洗
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+            <img src="../../assets/images/cleaning/sm-8.png"/>
+            冰箱清洗
+          </router-link>
+        </li>
+      </ul>
+    </div>
+    <div class="panel m-t-10">
+      <div class="title border-no">家庭保洁</div>
+      <ul class="list-tab clear">
+        <li><p>擦玻璃</p></li>
+        <li><p>擦玻璃</p></li>
+        <li><p>擦玻璃</p></li>
+        <li><p>擦玻璃</p></li>
+        <li><p>擦玻璃</p></li>
+        <li><p>擦玻璃</p></li>
+      </ul>
+    </div>
+    <div class="panel m-t-10">
+      <div class="title border-no">家电清洗</div>
+      <ul class="list-tab clear">
+        <li><p>油烟机清理</p></li>
+        <li><p>油烟机清理</p></li>
+        <li><p>洗衣机清洗</p></li>
+        <li><p>洗衣机清洗</p></li>
+        <li><p>洗衣机清洗</p></li>
+        <li><p>洗衣机清洗</p></li>
+      </ul>
+    </div>
+  </div>
 </template>
 <script>
-    export default{
-        data: function () {
-            return {
-                msg: '保洁分类'
-            }
-        }
+  export default{
+    data: function () {
+      return {
+        page: '保洁分类'
+      }
     }
+  }
 </script>

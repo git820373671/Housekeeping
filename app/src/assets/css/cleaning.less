@@ -1,0 +1,389 @@
+.cleaning {
+  background: @color-f5;
+  .banner {
+    display: block;
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .panel {
+    width: 100%;
+    background: @color-f;
+    .list-top {
+      padding-top: 10px;
+      > li {
+        display: block;
+        width: 25%;
+        padding: 10px 0;
+        float: left;
+        text-align: center;
+        line-height: 30px;
+        color: #565656;
+        img {
+          display: block;
+          width: 60%;
+          margin: 0 auto;
+        }
+      }
+    }
+    .title {
+      position: relative;
+      width: 100%;
+      height: 45px;
+      border-bottom: solid 1px @color-f5;
+      line-height: 45px;
+      padding-left: 10px;
+      font-size: 16px;
+      &.icon1, &.icon2, &.icon3, &.icon4 {
+        padding-left: 20px;
+      }
+      &:after {
+        position: absolute;
+        top: 14px;
+        left: 11px;
+        width: 4px;
+        height: 17px;
+
+        content: '';
+      }
+      &.icon1:after {
+        background: #ffcf1b;
+      }
+      &.icon2:after {
+        background: #1fd6b8;
+      }
+      &.icon3:after {
+        background: #fdac2b;
+      }
+      &.icon4:after {
+        background: #93d61f;
+      }
+    }
+    .card {
+      position: relative;
+      width: 100%;
+      height: 65px;
+      padding-left: 8%;
+      line-height: 65px;
+      > img {
+        width: 30%;
+      }
+      > .text {
+        position: absolute;
+        width: 55%;
+        top: 0;
+        right: 0;
+        padding-top: 15px;
+        line-height: 20px;
+        font-size: 13px;
+        span {
+          display: block;
+          color: @color-c;
+        }
+      }
+    }
+    .list-tab {
+      li {
+        display: block;
+        float: left;
+        width: 33.33%;
+        height: 30px;
+        margin-bottom: 10px;
+        text-align: center;
+        line-height: 30px;
+        p {
+          display: block;
+          margin: 0 10px;
+          height: 100%;
+          background: @color-f5;
+        }
+
+      }
+    }
+  }
+  .list-left {
+    width: 48.5%;
+    float: left;
+  }
+  .list-right {
+    width: 48.5%;
+    float: right;
+  }
+}
+
+.cleaning-all {
+  position: relative;
+  .tab-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    border-right: solid 1px @color-f5;
+    li {
+      position: relative;
+      width: 100%;
+      height: 30px;
+      margin-top: 10px;
+      text-align: center;
+      line-height: 30px;
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 4px;
+        height: 100%;
+        background: @color-yellow;
+        content: '';
+      }
+      &.active:after {
+        display: block;
+      }
+    }
+  }
+  .tab-con {
+    width: 72%;
+    margin-left: 28%;
+    .title {
+      line-height: 35px;
+      font-weight: 600;
+    }
+    .list {
+      width: 95%;
+      margin: 0 auto;
+      > li {
+        width: 33.33%;
+        float: left;
+        margin-bottom: 10px;
+        text-align: center;
+        line-height: 30px;
+        img {
+          display: block;
+          width: 85%;
+          margin: 0 auto;
+        }
+      }
+    }
+    .tab-box {
+      position: relative;
+      background: @color-f;
+      width: 95%;
+      margin: 20px 0;
+      padding-top: 10px;
+      &:extend(.shadow);
+      &:after {
+        position: absolute;
+        top: 0;
+        left: -5px;
+        width: 40px;
+        height: 30px;
+        background: url("../images/cleaning/hot.png") no-repeat;
+        background-size: 100% auto;
+
+      }
+    }
+  }
+}
+
+.cleaning-sort {
+  position: relative;
+  .tab-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background: @color-f;
+    width: 100%;
+    height: 40px;
+    border-bottom: solid 1px @color-e5;
+    &:after {
+      position: absolute;
+      display: block;
+      top: 10px;
+      left: 50%;
+      width: 1px;
+      height: 20px;
+      background: @color-f5;
+      content: '';
+    }
+    > li {
+      width: 50%;
+      float: left;
+      text-align: center;
+      line-height: 40px;
+      font-size: 14px;
+      &.active {
+        color: @color-yellow;
+      }
+      .show {
+        display: none;
+      }
+      .hidden {
+        display: inline;
+      }
+      .show, .hidden {
+        width: 8px;
+      }
+      .sort-icon {
+        width: 16px;
+        margin-right: 5px;
+      }
+      &.active {
+        .show {
+          display: inline;
+        }
+        .hidden {
+          display: none;
+        }
+      }
+    }
+  }
+  .tab-con {
+    position: relative;
+    z-index: 0;
+    padding-top: 40px;
+    > li {
+      position: relative;
+      height: 130px;
+      width: 100%;
+      padding: 10px 15px 0 105px;
+      border-bottom: solid 10px @color-f5;
+      .photo {
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        top: 15px;
+        left: 15px;
+      }
+      .title {
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        &:extend(.ellipsis);
+      }
+      .badge {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        .eval {
+          display: block;
+          float: left;
+          font-size: 13px;
+          color: @color-9;
+          img {
+            width: 13px;
+            margin-right: 5px;
+            vertical-align: inherit;
+          }
+
+        }
+        span {
+          display: block;
+          float: left;
+          margin-left: 10px;
+          font-size: 13px;
+          color: @color-9;
+        }
+      }
+      .price {
+        width: 100%;
+        height: 28px;
+        line-height: 28px;
+        font-size: 16px;
+        color: @color-red;
+        > span {
+          padding: 1px 8px;
+          border-radius: 3px;
+          background: @color-red;
+          color: @color-f;
+
+        }
+      }
+      .address {
+        width: 100%;
+        height: 30px;
+        border-top: solid 1px @color-f5;
+        line-height: 30px;
+        font-size: 13px;
+        color: @color-9;
+        img {
+          height: 15px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .sort-box {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    background: @color-f;
+
+    p {
+      width: 100%;
+      height: 45px;
+      line-height: 45px;
+      padding-left: 30px;
+      font-size: 14px;
+      border-bottom: solid 1px @color-f5;
+      &.active {
+        color: @color-yellow;
+      }
+    }
+  }
+  .choose-box {
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    top: 0;
+    left: 10%;
+    z-index: 10;
+    background: @color-f;
+    .title {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      padding-left: 15px;
+      font-size: 16px;
+    }
+    .list {
+      padding: 0 15px;
+      > li {
+        width: 33.33%;
+        height: 30px;
+        margin-bottom: 10px;
+        float: left;
+        text-align: center;
+        line-height: 30px;
+
+        p {
+          width: 90%;
+          height: 100%;
+          border: solid 1px @color-f5;
+          font-size: 14px;
+        }
+        &.active p {
+          color: @color-yellow;
+          border: solid 1px @color-yellow;
+        }
+      }
+    }
+    .bottom-btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 45px;
+      text-align: center;
+      line-height: 45px;
+      font-size: 16px;
+      background: @color-yellow;
+    }
+  }
+}
