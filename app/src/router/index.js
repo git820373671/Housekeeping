@@ -21,6 +21,7 @@ import SmallClassification from '../components/cleaning/smallClassification.vue'
 import AllClassification from '../components/cleaning/allClassification.vue'
 import Sort from '../components/cleaning/sort.vue'
 import SubNanny from '../components/cleaning/submitNanny.vue'
+import DelNanny from '../components/cleaning/detailNanny.vue'
 Vue.use(Router)
 Vue.use(Resource)
 
@@ -97,6 +98,11 @@ export default new Router({
       path: '/cleaning/subNanny/:id',
       name: 'SubNanny',
       component: SubNanny
+    },
+    {
+      path: '/cleaning/delNanny/:id',
+      name: 'DelNanny',
+      component: DelNanny
     }
   ]
 })

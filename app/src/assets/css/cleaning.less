@@ -387,3 +387,218 @@
     }
   }
 }
+
+.cleaning-sub {
+  padding-bottom: 15px;
+  background: @color-f5;
+  .personal {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    padding: 20px 0 0 110px;
+    background: url("../images/cleaning/line.png") repeat-x;
+    background-size: auto 100%;
+    .photo {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      top: 25px;
+      left: 20px;
+      border-radius: 50%;
+    }
+    .name {
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+      span {
+        font-size: 13px;
+        color: @color-9;
+        margin-left: 10px;
+      }
+    }
+    .price {
+      height: 22px;
+      line-height: 20px;
+      color: @color-9;
+      span {
+        font-size: 16px;
+        color: @color-red;
+      }
+    }
+    .address {
+      height: 25px;
+      line-height: 25px;
+      color: @color-9;
+      span {
+        font-size: 14px;
+        color: @color-9;
+        margin: 0 2px;
+      }
+    }
+  }
+  .panel {
+    width: 100%;
+    background: @color-f;
+    margin-bottom: 15px;
+    .personal-aut {
+      padding: 10px 20px 15px 20px;
+      li {
+        display: block;
+        width: 33.333%;
+        height: 30px;
+        float: left;
+        padding-left: 10px;
+        font-size: 13px;
+        line-height: 30px;
+        img {
+          height: 14px;
+          margin-right: 5px;
+          margin-top: -2px;
+        }
+      }
+    }
+    .personal-btn {
+      width: 100%;
+      height: 45px;
+      border-top: solid 1px @color-f5;
+      text-align: center;
+      line-height: 45px;
+      font-size: 13px;
+      img {
+        height: 14px;
+        margin-left: 3px;
+        margin-top: -4px;
+      }
+    }
+    .personal-detail {
+      .title {
+        width: 100%;
+        height: 45px;
+        padding-left: 15px;
+        border-bottom: solid 1px @color-f5;
+        line-height: 45px;
+        font-size: 16px;
+      }
+      .content {
+        padding: 10px 15px;
+        font-size: 13px;
+        line-height: 22px;
+      }
+    }
+    .evaluate {
+      padding-bottom: 1px;
+      .title {
+        width: 100%;
+        height: 45px;
+        padding: 0 15px;
+        line-height: 45px;
+        font-size: 16px;
+        .right {
+          color: @color-9;
+          font-size: 14px;
+          img {
+            width: 15px;
+            margin-right: 2px;
+            margin-top: -3px;
+          }
+        }
+      }
+      .eval-list {
+        margin-top: -10px;
+        li {
+          padding: 10px 0;
+          border-bottom: solid 1px @color-f5;
+          .name {
+            width: 100%;
+            padding: 0 15px;
+            height: 20px;
+            line-height: 20px;
+            color: @color-9;
+            font-size: 13px;
+            img {
+              width: 12px;
+              margin-left: 2px;
+              margin-top: -3px;
+            }
+          }
+          .text {
+            padding: 5px 15px 0 15px;
+            line-height: 25px;
+            font-size: 14px;
+          }
+          .time {
+            padding: 0 15px;
+            line-height: 25px;
+            color: @color-9;
+          }
+        }
+      }
+      .all-eval {
+        margin: 20px auto;
+        width: 100px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        border: solid 1px @color-yellow;
+        border-radius: 15px;
+        color: @color-yellow;
+      }
+    }
+    .icon-title {
+      display: block;
+      margin: 0 auto;
+      padding: 20px 0;
+      img {
+        display: block;
+        height: 17px;
+        margin: 0 auto;
+      }
+    }
+    .detail-box {
+      margin: 0 20px;
+      border: #f9fafe solid 1px;
+      .title {
+        width: 100%;
+        padding-left: 10px;
+        height: 30px;
+        line-height: 30px;
+        background: #f9fafe;
+      }
+
+    }
+    .three-list {
+      padding: 20px 15px 0 15px;
+
+      li {
+        width: 33.33%;
+        margin: 0 auto 10px auto;
+        float: left;
+        text-align: center;
+        p {
+          line-height: 35px;
+          img {
+            display: block;
+            width: 65%;
+            margin: 0 auto;
+          }
+        }
+      }
+      &.big {
+        padding-top: 0;
+        li p {
+        font-size: 14px;
+      }}
+    }
+  }
+  .sub-btn {
+    display: block;
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 3px;
+    background: @color-yellow;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+  }
+}
