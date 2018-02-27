@@ -9,8 +9,8 @@
       "gold": "800",
       "price": "140.00",
       "numData": {
-        "maxVal": 100,
-        "minVal": 0,
+        "maxVal": 10,
+        "minVal": 1,
         "val": 1
       }
     }

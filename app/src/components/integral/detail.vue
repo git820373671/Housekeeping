@@ -43,7 +43,9 @@
     data: function () {
       return {
         sum: '',
-        data: {}
+        data: {
+          'numData': {'val': ''}
+        }
       }
     },
     created: function () {
