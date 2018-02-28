@@ -388,7 +388,7 @@
   }
 }
 
-.cleaning-sub {
+.cleaning-detail {
   padding-bottom: 15px;
   background: @color-f5;
   .personal {
@@ -440,6 +440,7 @@
     width: 100%;
     background: @color-f;
     margin-bottom: 15px;
+    padding-bottom: 1px;
     .personal-aut {
       padding: 10px 20px 15px 20px;
       li {
@@ -554,8 +555,37 @@
         margin: 0 auto;
       }
     }
+    .table {
+      width: 89%;
+      margin: 0 auto 20px auto;
+      border: #f9fafe solid 1px;
+      border-bottom: none;
+      thead {
+        padding-left: 10px;
+        height: 35px;
+        line-height: 35px;
+        background: #f9fafe;
+
+        th {
+          font-weight: lighter;
+          font-size: 14px;
+        }
+      }
+      tbody {
+        tr {
+          height: 35px;
+          line-height: 35px;
+          text-align: center;
+
+          td {
+            font-size: 14px;
+            border-bottom: #f9fafe solid 1px;
+          }
+        }
+      }
+    }
     .detail-box {
-      margin: 0 20px;
+      margin: 0 20px 20px 20px;
       border: #f9fafe solid 1px;
       .title {
         width: 100%;
@@ -565,6 +595,22 @@
         background: #f9fafe;
       }
 
+    }
+    .text-box {
+      padding: 7px 10px;
+      line-height: 22px;
+      p {
+        font-size: 14px;
+        &.grey {
+          color: @color-c;
+          font-size: 12px;
+          span {
+            font-size: 12px;
+            text-indent: 28px;
+            color: @color-c;
+          }
+        }
+      }
     }
     .three-list {
       padding: 20px 15px 0 15px;
@@ -586,8 +632,59 @@
       &.big {
         padding-top: 0;
         li p {
-        font-size: 14px;
-      }}
+          font-size: 14px;
+        }
+      }
+    }
+    .two-list {
+      padding: 20px 20px 5px 20px;
+      line-height: 22px;
+      font-size: 14px;
+      li {
+        width: 50%;
+        margin: 0 auto 10px auto;
+        float: left;
+        text-align: center;
+        p {
+          width: 100%;
+          margin: 0 auto;
+          line-height: 20px;
+          img {
+            display: block;
+            width: 50%;
+            margin: 0 auto 5px auto;
+          }
+        }
+      }
+    }
+  }
+  .banner {
+    width: 100%;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .price-box {
+    padding: 5px 10px 10px 10px;
+    .tit {
+      height: 25px;
+      line-height: 25px;
+      font-size: 14px;
+    }
+    .note {
+      height: 25px;
+      line-height: 25px;
+      font-size: 16px;
+      color: @color-red;
+      img {
+        height: 18px;
+        margin-left: 3px;
+      }
+      .right {
+        color: @color-yellow;
+        font-size: 16px;
+      }
     }
   }
   .sub-btn {
@@ -600,5 +697,209 @@
     text-align: center;
     line-height: 40px;
     font-size: 14px;
+  }
+}
+
+.cleaning-personal {
+  padding-bottom: 15px;
+  background: @color-f5;
+  .nav {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    background: @color-f;
+    img {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      display: block;
+      height: 20px;
+    }
+  }
+  .panel {
+    width: 100%;
+    background: @color-f;
+    margin-bottom: 15px;
+    padding-bottom: 1px;
+    .title {
+      width: 100%;
+      height: 45px;
+      padding: 0 15px;
+      border-bottom: solid 1px @color-f5;
+      font-size: 12px;
+      color: #666;
+      line-height: 45px;
+    }
+    .base-list {
+      position: relative;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        background: @color-f5;
+        content: '';
+      }
+      li {
+        width: 50%;
+        padding: 0 15px;
+        height: 45px;
+        float: left;
+        border-bottom: solid 1px @color-f5;
+        font-size: 14px;
+        line-height: 45px;
+        &.clear {
+          width: 100%;
+          float: none;
+        }
+        &:nth-last-child(1) {
+          border: none;
+        }
+        span {
+          font-size: 14px;
+          float: right;
+        }
+      }
+    }
+    .row-list {
+      position: relative;
+      li {
+        padding: 0 15px;
+        min-height: 45px;
+        border-bottom: solid 1px @color-f5;
+        font-size: 14px;
+        line-height: 45px;
+        &:extend(.clear);
+        &:nth-last-child(1) {
+          border: none;
+        }
+        span {
+          font-size: 14px;
+          float: right;
+          img {
+            height: 13px;
+            margin-right: 3px;
+          }
+        }
+        p {
+          width: 70%;
+          padding: 10px 0;
+          line-height: 25px;
+          text-align: right;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.cleaning-evaluate {
+  padding-bottom: 15px;
+  background: @color-f5;
+  .panel {
+    width: 100%;
+    background: @color-f;
+    margin-bottom: 15px;
+    padding-bottom: 1px;
+    .title {
+      width: 100%;
+      height: 70px;
+      padding: 10px 15px;
+      line-height: 25px;
+      font-size: 16px;
+      border-bottom: solid 1px @color-f5;
+      .price {
+        font-size: 13px;
+        color: @color-red;
+      }
+    }
+    .sore {
+      width: 100%;
+      height: 45px;
+      padding: 0 15px;
+      line-height: 45px;
+      font-size: 13px;
+      .right {
+
+        font-size: 13px;
+        img {
+          width: 15px;
+          margin-left: 2px;
+          margin-top: -3px;
+        }
+      }
+    }
+    .eval-list {
+      width: 100%;
+      li {
+        position: relative;
+        padding: 15px 15px 15px 55px;
+        border-bottom: solid 1px @color-f5;
+        &:nth-last-child(1) {
+          border: none;
+        }
+        .photo {
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+        .icon {
+          height: 20px;
+          line-height: 20px;
+          img {
+            width: 16px;
+            margin-right: 3px;
+          }
+        }
+        .time {
+          line-height: 30px;
+          color: @color-9;
+        }
+        .text {
+          line-height: 20px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.cleaning-appointment{
+
+}
+.sub-box {
+  width: 100%;
+  .sub-static {
+    text-align: center;
+    padding-top: 25%;
+    font-size: 16px;
+    margin-bottom: 20%;
+    img {
+      display: block;
+      width: 40%;
+      margin: 10% auto;
+    }
+  }
+  .btn {
+    display: block;
+    width: 40%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 auto 30px auto;
+    font-size: 14px;
+    &.style1 {
+      border: solid 1px @color-0;
+    }
+    &.style2 {
+      background: @color-yellow;
+    }
   }
 }

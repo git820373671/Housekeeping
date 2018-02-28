@@ -21,9 +21,6 @@
           <img src="../../assets/images/cleaning/icon1.png"/>护理师证
         </li>
       </ul>
-      <router-link :to="{name: 'DelNanny', params: {id: '111'}}">
-        <div class="personal-btn">查看详细资料 <img src="../../assets/images/icon-right.png"/></div>
-      </router-link>
     </div>
     <div class="panel">
       <div class="personal-detail">
@@ -146,7 +143,9 @@
         </ul>
       </div>
     </div>
-    <div class="sub-btn">立即预约</div>
+    <router-link :to="{name: 'SubSuccess'}">
+      <div class="sub-btn">立即预约</div>
+    </router-link>
   </div>
 </template>
 <script>

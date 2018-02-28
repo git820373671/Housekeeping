@@ -20,8 +20,17 @@ import Cleaning from '../components/cleaning/index.vue'
 import SmallClassification from '../components/cleaning/smallClassification.vue'
 import AllClassification from '../components/cleaning/allClassification.vue'
 import Sort from '../components/cleaning/sort.vue'
+import DetNanny from '../components/cleaning/detailNanny.vue'
+import DetRefrig from '../components/cleaning/detailRefrigerator.vue'
+import DetGlass from '../components/cleaning/detailGlass.vue'
+import DetLand from '../components/cleaning/detailLand.vue'
+import NannyPersonal from '../components/cleaning/nannyPersonal.vue'
+import Evaluate from '../components/cleaning/evaluate.vue'
+import AppNanny from '../components/cleaning/appointmentNanny.vue'
 import SubNanny from '../components/cleaning/submitNanny.vue'
-import DelNanny from '../components/cleaning/detailNanny.vue'
+import SubRefrig from '../components/cleaning/submitRefrigerator.vue'
+import SubSuccess from '../components/cleaning/submitSuccess.vue'
+
 Vue.use(Router)
 Vue.use(Resource)
 
@@ -95,14 +104,54 @@ export default new Router({
       component: Sort
     },
     {
+      path: '/cleaning/detailNanny/:id',
+      name: 'DetNanny',
+      component: DetNanny
+    },
+    {
+      path: '/cleaning/detailRefrig',
+      name: 'DetRefrig',
+      component: DetRefrig
+    },
+    {
+      path: '/cleaning/detailGlass/id',
+      name: 'DetGlass',
+      component: DetGlass
+    },
+    {
+      path: '/cleaning/detailLand/id',
+      name: 'DetLand',
+      component: DetLand
+    },
+    {
+      path: '/cleaning/appNanny',
+      name: 'AppNanny',
+      component: AppNanny
+    },
+    {
+      path: '/cleaning/nannyPersonal/id',
+      name: 'NannyPersonal',
+      component: NannyPersonal
+    },
+    {
+      path: '/cleaning/evaluate',
+      name: 'Evaluate',
+      component: Evaluate
+    },
+    {
       path: '/cleaning/subNanny/:id',
       name: 'SubNanny',
       component: SubNanny
     },
     {
-      path: '/cleaning/delNanny/:id',
-      name: 'DelNanny',
-      component: DelNanny
+      path: '/cleaning/subRefrig',
+      name: 'SubRefrig',
+      component: SubRefrig
+    },
+    {
+      path: '/cleaning/success',
+      name: 'SubSuccess',
+      component: SubSuccess
     }
   ]
 })

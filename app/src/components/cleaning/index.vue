@@ -12,7 +12,7 @@
           </router-link>
         </li>
         <li>
-          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+          <router-link :to="{name: 'Sort', params: {id: 123}}">
             <img src="../../assets/images/cleaning/cleaning-2.png"/>
             保姆
           </router-link>

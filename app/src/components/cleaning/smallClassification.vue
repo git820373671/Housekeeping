@@ -18,13 +18,13 @@
           </router-link>
         </li>
         <li>
-          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+          <router-link :to="{name: 'DetLand', params: {id: 123}}">
             <img src="../../assets/images/cleaning/sm-3.png"/>
             新房开荒
           </router-link>
         </li>
         <li>
-          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+          <router-link :to="{name: 'DetGlass', params: {id: 123}}">
             <img src="../../assets/images/cleaning/sm-4.png"/>
             擦玻璃
           </router-link>
@@ -48,7 +48,7 @@
           </router-link>
         </li>
         <li>
-          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+          <router-link :to="{name: 'DetRefrig'}">
             <img src="../../assets/images/cleaning/sm-8.png"/>
             冰箱清洗
           </router-link>

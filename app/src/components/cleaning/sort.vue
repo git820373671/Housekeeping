@@ -31,7 +31,7 @@
     </div>
     <ul class="tab-con clear">
       <li>
-        <router-link :to="{name: 'SubNanny', params: {id: '7788'}}">
+        <router-link :to="{name: 'DetNanny', params: {id: '7788'}}">
           <img src="../../assets/images/img2.jpg" class="photo"/>
           <div class="title">刘阿姨 金牌保姆 经验丰富</div>
           <div class="badge"><p class="eval"><img src="../../assets/images/eval-1.png"/><img
@@ -43,7 +43,7 @@
         </router-link>
       </li>
       <li>
-        <router-link :to="{name: 'SubNanny', params: {id: '2314'}}">
+        <router-link :to="{name: 'DetNanny', params: {id: '2314'}}">
           <img src="../../assets/images/img2.jpg" class="photo"/>
           <div class="title">刘阿姨 金牌保姆 经验丰富</div>
           <div class="badge"><p class="eval"><img src="../../assets/images/eval-1.png"/><img
