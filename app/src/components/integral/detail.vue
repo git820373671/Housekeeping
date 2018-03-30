@@ -1,5 +1,6 @@
 <template>
   <div class="h100 integral-detail">
+    <header-menu :headerData="headerData"></header-menu>
     <img :src="data.photoSrc" class="photo"/>
     <h3 class="title">{{data.title}}</h3>
     <div class="price">
@@ -35,13 +36,17 @@
 
 <script>
   import numBox from '../common/numBox'
-
+  import HeaderMenu from '../common/header'
   export default {
     components: {
+      HeaderMenu: HeaderMenu,
       numBox: numBox
     },
     data: function () {
       return {
+        headerData: {
+          title: '积分'
+        },
         sum: '',
         data: {
           'numData': {'val': ''}

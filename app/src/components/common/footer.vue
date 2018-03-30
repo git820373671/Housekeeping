@@ -4,9 +4,9 @@
       <mt-tab-item id="index">
         <div class="icon-f-1"></div>
       </mt-tab-item>
-      <mt-tab-item id="find">
-        <div class="icon-f-2"></div>
-      </mt-tab-item>
+      <!--<mt-tab-item id="find">-->
+      <!--<div class="icon-f-2"></div>-->
+      <!--</mt-tab-item>-->
       <mt-tab-item id="recharge">
         <div class="icon-f-3"></div>
       </mt-tab-item>
@@ -20,7 +20,7 @@
   </div>
 </template>
 <script>
-  export default{
+  export default {
     name: 'footer-bar',
     data: function () {
       return {}
@@ -36,13 +36,17 @@
           this.$router.push({
             path: '/'
           })
-        } else if (newData === 'find') {
+        } else if (newData === 'car') {
           this.$router.push({
-            path: '/convenience/convenience'
+            name: 'Car'
+          })
+        } else if (newData === 'recharge') {
+          this.$router.push({
+            name: 'Recharge'
           })
         } else if (newData === 'user') {
           this.$router.push({
-            path: '/member/user'
+            path: '/user/index'
           })
         }
       }

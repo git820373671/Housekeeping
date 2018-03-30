@@ -14,11 +14,15 @@
   .list {
     width: 90%;
     margin: 0 auto;
+    padding-top: 20px;
     .clear;
     > li {
       display: block;
       width: 50%;
       float: left;
+      border: solid 1px @color-e5;
+      padding: 10px;
+      margin-bottom: 20px;
       .photo {
         display: block;
         width: 80%;
@@ -141,27 +145,43 @@
 .integral-exchange {
   position: relative;
   background: @color-f5;
-  padding-top: 15px;
+  padding-top: 55px;
+  padding-bottom: 55px;
   > .panel {
     margin: 0 15px 15px 15px;
     background: @color-f;
     border-radius: 2px;
     .clear;
     > .choose-adress {
-      height: 50px;
-      padding: 10px;
+      position: relative;
+      min-height: 50px;
+      padding: 10px 30px 10px 45px;
       line-height: 30px;
-      font-size: 16px;
-      color: @color-c;
-      > .left {
-        height: 24px;
-        margin-top: 2px;
-        margin-right: 10px;
+
+      > .choose {
+        font-size: 16px;
+        color: @color-c;
       }
-      > .right {
+      > .detail {
+        margin-top: -5px;
+        line-height: 20px;
+        .name {
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
+      > .left {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        width: 18px;
+
+      }
+      img.right {
+        position: absolute;
         height: 14px;
-        margin-top: 8px;
-        margin-right: 10px;
+        top: 18px;
+        right: 10px;
       }
     }
     > .detail {
@@ -180,7 +200,7 @@
         > .icon {
           position: absolute;
           top: 10px;
-          left: 0;
+          left: 5px;
           display: block;
           height: 24px;
         }

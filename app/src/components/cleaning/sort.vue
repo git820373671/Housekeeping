@@ -1,11 +1,13 @@
 <template>
   <div class="h100 cleaning-sort">
+    <header-menu :headerData="headerData"></header-menu>
     <ul class="tab-bar">
       <li :class="isSort?'active':''" v-on:click="isSort=true">{{sortName}}
         <img src="../../assets/images/cleaning/st-icon1.png" class="show"/>
         <img src="../../assets/images/cleaning/st-icon2.png" class="hidden"/>
       </li>
-      <li v-on:click="isChoose=true"><img src="../../assets/images/cleaning/st-icon3.png" class="sort-icon"/>筛选
+      <li v-on:click="isChoose=true;isSort=false"><img src="../../assets/images/cleaning/st-icon3.png"
+                                                       class="sort-icon"/>筛选
       </li>
     </ul>
     <div class="sort-box" v-if="isSort">
@@ -14,9 +16,9 @@
       <P :class="sortType==3?'active':''" v-on:click="doSort(3,'价格由低到高')">价格由低到高</P>
       <P :class="sortType==4?'active':''" v-on:click="doSort(4,'价格由高到低')">价格由高到低</P>
     </div>
-    <div class="choose-box" v-show="isChoose">
+    <div :class=" isChoose ? 'choose-box active' : 'choose-box' ">
       <div class="title">服务类别</div>
-      <ul class="list">
+      <ul class="list" id="listBox">
         <li v-on:click="doChoose('12')" id="12"><p>地锁</p></li>
         <li v-on:click="doChoose('45')" id="45"><p>保险柜</p></li>
         <li v-on:click="doChoose('44')" id="44"><p>汽车锁</p></li>
@@ -59,15 +61,25 @@
   </div>
 </template>
 <script>
-  export default{
+  import HeaderMenu from '../common/header'
+
+  export default {
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
       return {
-        msg: '保姆',
+        headerData: {
+          title: '保姆'
+        },
         isChoose: false,
         isSort: false,
         sortName: '综合排序',
         sortType: 1
       }
+    },
+    created: function () {
+      this.move()
     },
     methods: {
       doSort: function (val, name) {
@@ -84,11 +96,28 @@
       },
       doChoose: function (id) {
         var $el = document.getElementById(id)
-        if ($el.className === 'active') {
-          $el.setAttribute('class', '')
-        } else {
-          $el.setAttribute('class', 'active')
+        var $ul = document.getElementById('listBox').getElementsByClassName('active')
+        for (var i = 0; i < $ul.length; i++) {
+          $ul[i].setAttribute('class', '')
         }
+        $el.setAttribute('class', 'active')
+      },
+      move: function () {
+        var $this = this
+        var SChangX
+        var EChangX
+        document.addEventListener('touchstart', function (e) {
+          console.log(e)
+          SChangX = e.changedTouches[0].pageY
+        }, false)
+        document.addEventListener('touchend', function (e) {
+          console.log(e)
+          EChangX = e.changedTouches[0].pageY
+          if (EChangX > SChangX) {
+            $this.isChoose = false
+            window.close(true)
+          }
+        }, false)
       }
     }
   }

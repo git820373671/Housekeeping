@@ -1,5 +1,6 @@
 <template>
   <div class="h100 cleaning-detail">
+    <header-menu :headerData="headerData"></header-menu>
     <div class="personal">
       <img src="../../assets/images/img2.jpg" class="photo"/>
       <div class="name">李阿姨<span>工号：12345678</span></div>
@@ -154,10 +155,16 @@
   </div>
 </template>
 <script>
+  import HeaderMenu from '../common/header'
   export default{
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
       return {
-        msg: '保姆下单'
+        headerData: {
+          title: '保姆下单'
+        }
       }
     }
   }

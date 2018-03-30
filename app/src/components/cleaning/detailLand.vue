@@ -1,5 +1,6 @@
 <template>
   <div class="h100 cleaning-detail">
+    <header-menu :headerData="headerData"></header-menu>
     <div class="banner">
       <img src="../../assets/images/cleaning/img1.jpg"/>
     </div>
@@ -164,16 +165,22 @@
         </ul>
       </div>
     </div>
-    <router-link :to="{name: 'SubSuccess'}">
+    <router-link :to="{name: 'AppLand'}">
       <div class="sub-btn">立即预约</div>
     </router-link>
   </div>
 </template>
 <script>
+  import HeaderMenu from '../common/header'
   export default{
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
       return {
-        msg: '详情开荒'
+        headerData: {
+          title: '详情开荒'
+        }
       }
     }
   }

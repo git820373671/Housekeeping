@@ -1,5 +1,6 @@
 <template>
   <div class="h100 convenience-release">
+    <header-menu :headerData="headerData"></header-menu>
     <div class="panel">
       <uploader></uploader>
     </div>
@@ -19,7 +20,7 @@
       </div>
       <div class="field-box">
         <P> 服务区域</P>
-        <select class="field" v-model="subData.address" style="width: auto">
+        <select class="field" v-model="subData.address" style="width: auto" placeholder="请输入联系方式">
           <option value="auto">请选择</option>
           <option value="saab">Saab</option>
           <option value="opel">Opel</option>
@@ -38,12 +39,17 @@
 </template>
 <script>
   import Uploader from '../common/uploader'
+  import HeaderMenu from '../common/header'
   export default{
     components: {
+      HeaderMenu: HeaderMenu,
       Uploader: Uploader
     },
     data: function () {
       return {
+        headerData: {
+          title: '发布'
+        },
         subData: {
           title: '',
           name: '',

@@ -1,17 +1,22 @@
 <template>
   <div class="h100 integral-exchange">
+    <header-menu :headerData="headerData"></header-menu>
     <div class="panel">
       <div class="choose-adress">
-        <img src="../../assets/images/gold.png" class="left"/>
-        请选择一个服务地址
-        <img src="../../assets/images/gold.png" class="right"/>
+        <img src="../../assets/images/icon1.png" class="left"/>
+        <div class="choose">请选择一个服务地址</div>
+        <div class="detail"  style="display: none">
+          <div class="name">姓名  1581341234</div>
+          辽宁省沈阳市浑南区首页国际软件园F区 F8栋 A406 位置不够向下动
+        </div>
+        <img src="../../assets/images/icon-right.png" class="right"/>
       </div>
 
     </div>
     <div class="panel">
       <div class="detail">
         <div class="title">
-          <img src="../../assets/images/gold.png" class="icon"/>
+          <img src="../../assets/images/icon2.png" class="icon"/>
           <p>订单详情</p>
         </div>
         <ul class="list">
@@ -21,21 +26,20 @@
           <li>总价格：<p>8000积分+<span>1408.00</span>元(含邮费)</p></li>
         </ul>
       </div>
-
     </div>
     <div class="panel">
       <div class="detail">
         <div class="title">
-          <img src="../../assets/images/gold.png" class="icon"/>
+          <img src="../../assets/images/icon3.png" class="icon"/>
           <p>支付方式</p>
         </div>
         <div class="pay-list">
           <div class="icon">
-            <img src="../../assets/images/gold.png" class="top"/>
-            <img src="../../assets/images/gold.png" class="bottom"/>
+            <img src="../../assets/images/icon4.png" class="top"/>
+            <img src="../../assets/images/icon5.png" class="bottom"/>
           </div>
           <mt-radio
-            v-model="value"
+            v-model="radioVal"
             align="right"
             :options="['余额支付', '微信支付']">
           </mt-radio>
@@ -56,16 +60,20 @@
 </template>
 
 <script>
-  import numBox from '../common/numBox'
-
+  import HeaderMenu from '../common/header'
   export default {
     components: {
-      numBox: numBox
+      HeaderMenu: HeaderMenu
     },
     data: function () {
       return {
+        headerData: {
+          title: '积分兑换'
+        },
+        radioVal: '',
         sum: '',
-        data: {}
+        data: {},
+        password: ''
       }
     },
     created: function () {

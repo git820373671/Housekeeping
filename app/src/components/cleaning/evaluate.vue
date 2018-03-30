@@ -1,5 +1,6 @@
 <template>
   <div class="h100 cleaning-evaluate">
+    <header-menu :headerData="headerData"></header-menu>
     <div class="panel">
       <div class="title">
         专业擦玻璃
@@ -59,10 +60,16 @@
   </div>
 </template>
 <script>
+  import HeaderMenu from '../common/header'
   export default{
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
       return {
-        msg: 'hello vue'
+        headerData: {
+          title: '评价'
+        }
       }
     }
   }

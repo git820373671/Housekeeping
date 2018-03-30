@@ -1,5 +1,6 @@
 <template>
   <div class="h100 integral">
+    <header-menu :headerData="headerData"></header-menu>
     <div class="header"><img src="../../assets/images/gold.png"/>{{sum}}积分</div>
     <ul class="list">
       <li v-for="(item,index) in listData" >
@@ -15,10 +16,18 @@
   </div>
 </template>
 <script>
+  import HeaderMenu from '../common/header'
   export default {
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
       return {
-        sum: '', listData: []
+        headerData: {
+          title: '积分'
+        },
+        sum: '',
+        listData: []
       }
     },
     created: function () {

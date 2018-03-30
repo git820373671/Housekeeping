@@ -1,5 +1,6 @@
 <template>
   <div class="h100 cleaning">
+    <header-menu :headerData="headerData"></header-menu>
     <div class="banner">
       <img src="../../assets/images/cleaning/banner.png">
     </div>
@@ -18,31 +19,31 @@
           </router-link>
         </li>
         <li>
-          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+          <router-link :to="{name: 'Sort', params: {id: 123}}">
             <img src="../../assets/images/cleaning/cleaning-3.png"/>
             开锁换锁
           </router-link>
         </li>
         <li>
-          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+          <router-link :to="{name: 'Sort', params: {id: 123}}">
             <img src="../../assets/images/cleaning/cleaning-4.png"/>
             货运搬家
           </router-link>
         </li>
         <li>
-          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+          <router-link :to="{name: 'Sort', params: {id: 123}}">
             <img src="../../assets/images/cleaning/cleaning-5.png"/>
             家电维修
           </router-link>
         </li>
         <li>
-          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+          <router-link :to="{name: 'Sort', params: {id: 123}}">
             <img src="../../assets/images/cleaning/cleaning-6.png"/>
             房屋维修
           </router-link>
         </li>
         <li>
-          <router-link :to="{name: 'SmallClassification', params: {id: 123}}">
+          <router-link :to="{name: 'Sort', params: {id: 123}}">
             <img src="../../assets/images/cleaning/cleaning-7.png"/>
             洗护
           </router-link>
@@ -132,10 +133,16 @@
   </div>
 </template>
 <script>
+  import HeaderMenu from '../common/header'
   export default{
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
       return {
-        page: '保洁首页'
+        headerData: {
+          title: '保洁首页'
+        }
       }
     }
   }

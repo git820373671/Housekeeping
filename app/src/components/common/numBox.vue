@@ -38,7 +38,10 @@
         this.numData.val = this.numData.val + 1
         this.isReduce = true
         if (this.numData.val >= this.numData.maxVal) {
-          Toast('最多' + this.numData.maxVal)
+          Toast({
+            message: '最多' + this.numData.maxVal,
+            duration: 1000
+          })
           this.isAdd = false
           this.numData.val = this.numData.maxVal
         } else {
@@ -49,7 +52,10 @@
         this.numData.val = this.numData.val - 1
         this.isAdd = true
         if (this.numData.val <= this.numData.minVal) {
-          Toast('最少' + this.numData.minVal)
+          Toast({
+            message: '最少' + this.numData.minVal,
+            duration: 1000
+          })
           this.isReduce = false
           this.numData.val = this.numData.minVal
         } else {

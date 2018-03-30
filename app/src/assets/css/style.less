@@ -13,6 +13,10 @@
   -webkit-tap-highlight-color: rgba(255, 255, 255, .35);
 }
 
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #ccc;
+}
+
 a {
   color: @color-0;
 }
@@ -60,8 +64,8 @@ img {
   margin-top: 5px;
 }
 
-.p-t-20 {
-  padding-top: 20px !important;
+.p-b-20 {
+  padding-bottom: 20px !important;
 }
 
 .m-l-r-20 {
@@ -82,7 +86,7 @@ img {
 }
 
 .shadow {
-  box-shadow: 0 1px 2px 0px @color-f5;
+  box-shadow: 0 0px 5px 1px @color-e5;
 }
 
 .model {
@@ -107,12 +111,37 @@ img {
 
 .h100 {
   min-height: 100%;
+  padding-top: 40px;
 
 }
 
+.empty {
+  width: 100%;
+  text-align: center;
+  padding-top: 45%;
+  .text {
+    font-size: 14px;
+    color: @color-c;
+  }
+  img {
+    display: block;
+    width: 30%;
+    margin: 10px auto 0 auto;
+  }
+}
+
+.mint-cell-wrapper {
+  background: none !important;
+}
+
+@import "index";
 @import "common";
 @import "upLoad";
 @import "index";
 @import "integral";
 @import "convenience";
 @import "cleaning";
+@import "user";
+@import "order";
+@import "recharge";
+@import "car";

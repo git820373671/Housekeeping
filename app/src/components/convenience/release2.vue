@@ -1,5 +1,6 @@
 <template>
   <div class="h100 convenience-release">
+    <header-menu :headerData="headerData"></header-menu>
     <ul class="list">
       <li v-for="(item,index) in listData" class="clear">
         <router-link :to="{name: 'ConvenienceRelease3', params: {id: item.id}}">
@@ -12,9 +13,16 @@
   </div>
 </template>
 <script>
+  import HeaderMenu from '../common/header'
   export default{
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
       return {
+        headerData: {
+          title: '发布'
+        },
         pageId: '',
         listData: []
       }

@@ -1,5 +1,6 @@
 <template>
   <div class="h100 cleaning-personal">
+    <header-menu :headerData="headerData"></header-menu>
     <div class="nav">
       <img src="../../assets/images/icon-left.png" class="left" v-on:click="$router.go(-1)"/>
       李阿姨的详细资料
@@ -69,10 +70,16 @@
   </div>
 </template>
 <script>
+  import HeaderMenu from '../common/header'
   export default{
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
       return {
-        msg: '保姆'
+        headerData: {
+          title: '保姆'
+        }
       }
     },
     methods: {}

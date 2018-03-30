@@ -1,5 +1,6 @@
 <template>
   <div class="h100 convenience-detail">
+    <header-menu :headerData="headerData"></header-menu>
     <div class="panel">
       <div class="title">招24小时住家保姆，钟点工，育儿嫂等，电话联 系</div>
       <div class="time">发布时间：2017.04.17</div>
@@ -23,10 +24,16 @@
   </div>
 </template>
 <script>
+  import HeaderMenu from '../common/header'
   export default{
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
       return {
-        msg: 'hello vue'
+        headerData: {
+          title: '便民信息'
+        }
       }
     }
   }

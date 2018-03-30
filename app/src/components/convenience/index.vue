@@ -1,5 +1,6 @@
 <template>
   <div class="h100 convenience">
+    <header-menu :headerData="headerData"></header-menu>
     <ul class="tab-list clear">
       <li>
         <router-link :to="{name: 'ConvenienceList', params: {id: 11}}">
@@ -72,14 +73,20 @@
 </template>
 <script>
   import FooterBar from '../common/footer'
-  export default{
+  import HeaderMenu from '../common/header'
+
+  export default {
     components: {
-      FooterBar: FooterBar
+      FooterBar: FooterBar,
+      HeaderMenu: HeaderMenu
     },
     data: function () {
       return {
         footerData: {
           selected: 'find'
+        },
+        headerData: {
+          title: '便民信息'
         },
         type: 1,
         listData: {}

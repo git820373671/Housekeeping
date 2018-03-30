@@ -1,5 +1,5 @@
 <template>
-  <div class="h100 sub-box">
+  <div class="h100 sub-static-box">
     <div class="sub-static">
       恭喜下单成功！
       <img src="../../assets/images/sunccess.png"/>

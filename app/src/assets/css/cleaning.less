@@ -1,5 +1,5 @@
 .cleaning {
-  background: @color-f5;
+  background: @color-bg;
   .banner {
     display: block;
     width: 100%;
@@ -117,7 +117,7 @@
   position: relative;
   .tab-bar {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     width: 25%;
     height: 100%;
@@ -192,7 +192,7 @@
   position: relative;
   .tab-bar {
     position: fixed;
-    top: 0;
+    top: 40px;
     left: 0;
     z-index: 6;
     background: @color-f;
@@ -310,6 +310,7 @@
         line-height: 30px;
         font-size: 13px;
         color: @color-9;
+        background: none;
         img {
           height: 15px;
           margin-right: 5px;
@@ -319,7 +320,7 @@
   }
   .sort-box {
     position: fixed;
-    top: 40px;
+    top: 80px;
     left: 0;
     z-index: 11;
     width: 100%;
@@ -342,9 +343,13 @@
     width: 90%;
     height: 100%;
     top: 0;
-    left: 10%;
+    right: -100%;
     z-index: 10;
     background: @color-f;
+    transition: all .5s;
+    &.active {
+      right: 0;
+    }
     .title {
       width: 100%;
       height: 50px;
@@ -389,8 +394,8 @@
 }
 
 .cleaning-detail {
-  padding-bottom: 15px;
-  background: @color-f5;
+  padding-bottom: 20px;
+  background: @color-bg;
   .personal {
     position: relative;
     width: 100%;
@@ -687,22 +692,32 @@
       }
     }
   }
-  .sub-btn {
-    display: block;
-    width: 80%;
-    height: 40px;
-    margin: 0 auto;
-    border-radius: 3px;
-    background: @color-yellow;
-    text-align: center;
-    line-height: 40px;
-    font-size: 14px;
+  .sub-box {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 57px;
+    padding-top: 10px;
+    background: @color-bg;
+    .sub-btn {
+      display: block;
+      width: 80%;
+      height: 35px;
+      margin: 0 auto;
+      border-radius: 3px;
+      background: @color-yellow;
+      text-align: center;
+      line-height: 35px;
+      font-size: 14px;
+    }
   }
+
 }
 
 .cleaning-personal {
-  padding-bottom: 15px;
-  background: @color-f5;
+  padding-bottom: 55px;
+  background: @color-bg;
   .nav {
     width: 100%;
     height: 50px;
@@ -798,8 +813,8 @@
 }
 
 .cleaning-evaluate {
-  padding-bottom: 15px;
-  background: @color-f5;
+  padding-bottom: 55px;
+  background: @color-bg;
   .panel {
     width: 100%;
     background: @color-f;
@@ -871,10 +886,319 @@
   }
 }
 
-.cleaning-appointment{
+.cleaning-appointment {
+  padding-top: 55px;
+  padding-bottom: 70px;
+  background: @color-bg;
+  .panel {
+    margin: 0 15px 15px 15px;
+    background: @color-f;
+    .detail-box {
+      padding: 5px 10px;
+      .tit {
+        position: relative;
+        width: 100%;
+        padding-left: 30px;
+        height: 40px;
+        line-height: 30px;
+        img {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          display: block;
+          width: 15px;
+        }
+        p {
+          color: @color-9;
+          border-bottom: dashed 1px @color-e5;
+        }
+      }
+      .list {
+        padding-bottom: 5px;
+        padding-left: 30px;
+        li {
+          min-height: 30px;
+          line-height: 30px;
+          &:extend(.clear);
+          .lable {
+            width: 80px;
+            float: left;
+            text-align: right;
+            font-size: 14px;
+            color: @color-9;
+          }
+          .right {
+            font-size: 14px;
+          }
+          .red {
+            color: @color-red;
+          }
+          .filed {
+            height: 22px;
+            padding: 0 3px;
+            border: solid 1px @color-e5;
+            border-radius: 3px;
+          }
+          &.border {
+            margin-top: 5px;
+            border-top: dashed 1px @color-e5;
+            height: 75px;
+            padding-top: 10px;
+            text-align: right;
+            .field {
+              display: inline-block;
+              width: 110px;
+              padding: 0 5px;
+              height: 22px;
+              line-height: 22px;
+              border: solid 1px @color-c;
+              border-radius: 3px;
+            }
+            .check-box {
+              label {
+                font-size: 14px;
+                input {
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+        }
+      }
+      .mint-field {
+        border: solid 1px @color-e5;
+        border-radius: 6px;
+        min-height: 33px;
+        margin: 10px 10px 0 10px;
+        .mint-cell-text {
+          font-size: 14px;
+        }
+        .mint-field-core {
+          text-align: right;
+          font-size: 14px;
+        }
+      }
+      .radio-box {
+        height: 35px;
+        text-align: right;
+        > p {
+          display: block;
+          float: right;
+          width: 44px;
+          height: 24px;
+          margin: 10px 10px 0 5px;
+          background: url("../images/cleaning/icon4-0.png") no-repeat;
+          background-size: 100% 100%;
+          text-align: center;
+          line-height: 22px;
+          &.active {
+            background: url("../images/cleaning/icon4-1.png") no-repeat;
+            background-size: 100% auto;
+            color: @color-yellow;
+          }
+        }
+
+      }
+      .type-list {
+        padding-left: 30px;
+        li {
+          position: relative;
+          height: 75px;
+          padding-left: 80px;
+          line-height: 75px;
+          img {
+            position: absolute;
+            top: 5px;
+            left: 0;
+            height: 65px;
+            width: 65px;
+          }
+          .name {
+            display: block;
+            width: 50%;
+            font-size: 14px;
+          }
+          .price {
+            position: absolute;
+            top: 0;
+            right: 40px;
+            font-size: 14px;
+            color: @color-red;
+            span {
+              font-size: 12px;
+              color: @color-9;
+            }
+          }
+          .radio {
+            position: absolute;
+            top: 29px;
+            right: 0;
+            width: 18px;
+            height: 18px;
+            span {
+              display: block;
+              width: 100%;
+              height: 100%;
+              background: url("../images/cleaning/radio-0.png") no-repeat;
+              background-size: 100% 100%;
+            }
+            input[type=radio] {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+            }
+            input[type=radio]:checked + span {
+              background: url("../images/cleaning/radio-1.png") no-repeat;
+              background-size: 100% 100%;
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+  .data-box {
+    background: @color-f;
+    .data-title {
+      height: 60px;
+      padding-top: 13px;
+      line-height: 20px;
+      li {
+        position: relative;
+        width: 20%;
+        height: 100%;
+        float: left;
+        text-align: center;
+        font-size: 12px;
+        &.active {
+          color: @color-yellow;
+          &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: @color-yellow;
+            content: '';
+          }
+        }
+      }
+    }
+    .data-time {
+      margin: 15px 15px 0 15px;
+      border: solid 1px @color-e5;
+      li {
+        position: relative;
+
+        height: 45px;
+        float: left;
+        color: #666;
+        line-height: 40px;
+        text-align: center;
+        border-top: solid 1px @color-e5;
+        border-right: solid 1px @color-e5;
+
+        &.active {
+          background: @color-yellow;
+        }
+        &.fail {
+          color: @color-c;
+          &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            transform: scale(.9, .8);
+            color: @color-c;
+            content: '[已约满]';
+          }
+        }
+      }
+      &.six {
+        li {
+          width: 16.66%;
+          &:nth-child(-n+6) {
+            border-top: none;
+          }
+          &:nth-child(6n) {
+            border-right: none;
+          }
+        }
+      }
+      &.three {
+        li {
+          width: 33.33%;
+          &:nth-child(-n+3) {
+            border-top: none;
+          }
+          &:nth-child(3n) {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+
+  .appointment-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: @color-f;
+    border-top: solid 1px @color-f1;
+    line-height: 50px;
+    .btn-icon {
+      position: relative;
+      width: 24%;
+      height: 100%;
+      border-right: solid 1px @color-f5;
+      float: left;
+      text-align: center;
+      color: #666;
+      padding: 8px 0 0 0;
+      line-height: 20px;
+      img {
+        display: block;
+        margin: 0 auto;
+        height: 20px;
+      }
+      .node {
+        position: absolute;
+        top: 5px;
+        left: 55%;
+        min-width: 20px;
+        padding: 0 5px;
+        height: 16px;
+        line-height: 16px;
+        color: @color-f;
+        text-align: center;
+        background: @color-red;
+        border-radius: 8px;
+      }
+    }
+    .btn {
+      width: 38%;
+      height: 100%;
+      float: left;
+      text-align: center;
+      font-size: 16px;
+      &.yellow {
+        background: @color-yellow;
+      }
+    }
+  }
 
 }
-.sub-box {
+
+.sub-static-box {
   width: 100%;
   .sub-static {
     text-align: center;
@@ -901,5 +1225,265 @@
     &.style2 {
       background: @color-yellow;
     }
+  }
+}
+
+.submit-page {
+  position: relative;
+  background: @color-f5;
+  padding-top: 55px;
+  > .panel {
+    margin: 0 15px 15px 15px;
+    background: @color-f;
+    border-radius: 2px;
+    .clear;
+    > .choose-adress {
+      position: relative;
+      min-height: 50px;
+      padding: 10px 30px 10px 45px;
+      line-height: 30px;
+
+      .choose {
+        font-size: 16px;
+        color: @color-c;
+      }
+      .detail {
+        margin-top: -5px;
+        line-height: 20px;
+        .name {
+          font-size: 16px;
+          line-height: 25px;
+        }
+      }
+      .left {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        width: 18px;
+
+      }
+      img.right {
+        position: absolute;
+        height: 14px;
+        top: 18px;
+        right: 10px;
+      }
+    }
+    > .detail {
+      padding: 0 10px 10px 10px;
+      > .title {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        > p {
+          margin-left: 35px;
+          font-size: 12px;
+          color: @color-9;
+          border-bottom: dashed 1px @color-e5;
+        }
+        > .icon {
+          position: absolute;
+          top: 10px;
+          left: 5px;
+          display: block;
+          height: 24px;
+        }
+
+      }
+      > .list {
+        margin-left: 35px;
+        padding: 0 0 5px 0;
+        & + .list {
+          margin-top: -5px;
+        }
+        > li {
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          font-size: 14px;
+          color: @color-9;
+          > p {
+            float: right;
+            font-size: 14px;
+            color: @color-0;
+            > span {
+              color: @color-red;
+              font-size: 14px;
+            }
+            &.grey {
+              color: @color-9;
+              img {
+                height: 13px;
+                margin-left: 5px;
+              }
+            }
+          }
+          &:nth-last-child(1) {
+            margin-top: 5px;
+            padding-top: 5px;
+            border-top: dashed 1px @color-e5;
+          }
+        }
+
+      }
+      > .pay-list {
+        position: relative;
+        margin-left: 10px;
+        .icon {
+          position: absolute;
+          top: 0;
+          left: 25px;
+          z-index: 1;
+          width: 30px;
+          height: 100%;
+          > img {
+            display: block;
+            margin: 0;
+            width: 20px;
+            &.top {
+              margin-top: 7px;
+            }
+            &.bottom {
+              margin-top: 14px;
+            }
+          }
+        }
+        .mint-cell {
+          min-height: 35px;
+          .mint-radio-label {
+            padding-left: 30px;
+            font-size: 14px;
+            color: @color-9;
+          }
+          .mint-radio-input:checked + .mint-radio-core {
+            background-color: @color-yellow;
+            border-color: @color-yellow;
+          }
+        }
+      }
+
+    }
+    > .pay-way {
+      .mint-cell-text {
+        padding-left: 10px;
+        font-size: 16px;
+        color: @color-9;
+      }
+      .mint-field-core {
+        font-size: 14px;
+        color: @color-9;
+      }
+    }
+  }
+  .submit-foot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: @color-f;
+    line-height: 50px;
+    .text {
+      display: block;
+      width: 29%;
+      height: 100%;
+      float: left;
+      text-align: center;
+      color: @color-9;
+      &.red {
+        width: 33%;
+        font-size: 16px;
+        color: @color-red;
+      }
+    }
+    .btn {
+      width: 38%;
+      height: 100%;
+      float: right;
+      background: @color-red;
+      text-align: center;
+      font-size: 16px;
+      color: @color-f;
+    }
+  }
+}
+
+.address-page {
+  position: relative;
+  background: @color-f5;
+  .address-list {
+
+    li {
+      position: relative;
+      padding: 15px;
+      margin-bottom: 10px;
+      background: @color-f;
+      .top {
+        line-height: 30px;
+        font-size: 14px;
+        span {
+          float: right;
+          font-size: 14px;
+        }
+      }
+      .mid {
+        margin-bottom: 5px;
+        line-height: 25px;
+        font-size: 14px;
+      }
+      .bottom {
+        position: relative;
+        height: 30px;
+        padding-top: 5px;
+        .radio {
+          float: left;
+          width: 80px;
+          height: 18px;
+          span {
+            position: relative;
+            display: block;
+            width: 80px;
+            height: 100%;
+            padding-left: 25px;
+            &:after {
+              position: absolute;
+              top: -2px;
+              left: 0;
+              background: url("../images/cleaning/radio-0.png") no-repeat;
+              background-size: 100% 100%;
+              width: 18px;
+              height: 18px;
+              content: '';
+            }
+
+          }
+          input[type=radio] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+          }
+          input[type=radio]:checked + span {
+            color: @color-yellow;
+            &:after {
+              background: url("../images/cleaning/radio-1.png") no-repeat;
+              background-size: 100% 100%;
+            }
+          }
+        }
+        span.right {
+          font-size: 12px;
+          border-radius: 3px;
+          padding: 3px 7px;
+          border: solid 1px @color-e5;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .footer-btn {
+    background: @color-yellow;
   }
 }

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Resource from 'vue-resource'
 import '../assets/script/layout.js'
+import apiUrl from '../assets/script/apiUrl.js'
 import '../assets/css/style.css'
 import Index from '../components/index/index.vue'
 /* 积分兑换 */
@@ -27,13 +28,43 @@ import DetLand from '../components/cleaning/detailLand.vue'
 import NannyPersonal from '../components/cleaning/nannyPersonal.vue'
 import Evaluate from '../components/cleaning/evaluate.vue'
 import AppNanny from '../components/cleaning/appointmentNanny.vue'
-import SubNanny from '../components/cleaning/submitNanny.vue'
-import SubRefrig from '../components/cleaning/submitRefrigerator.vue'
-import SubSuccess from '../components/cleaning/submitSuccess.vue'
+import AppClean from '../components/cleaning/appointmentCleaning.vue'
+import AppRefrig from '../components/cleaning/appointmentRefrigerator.vue'
+import AppLand from '../components/cleaning/appointmentLand.vue'
+import SubmitPage from '../components/cleaning/submitPage.vue'
+import SubmitState from '../components/cleaning/submitSuccess.vue'
+
+/* 我的 */
+import UserIndex from '../components/user/index.vue'
+import UserCoupon from '../components/user/coupon.vue'
+import UserBalance from '../components/user/balance.vue'
+import UserIntegral from '../components/user/integral.vue'
+import UserAdAdd from '../components/user/addressAdd.vue'
+import UserAdLocation from '../components/user/addressLocation.vue'
+import UserLogistics from '../components/user/logistics.vue'
+import UserGiftList from '../components/user/giftList.vue'
+import UserDistribution from '../components/user/distribution.vue'
+import UserConsumption from '../components/user/consumption.vue'
+import ChooseAddress from '../components/user/address.vue'
+import Invite from '../components/user/invite.vue'
+
+/* 我的订单 */
+import OrderList from '../components/order/list.vue'
+import OrderDetail from '../components/order/detail.vue'
+import OrderEvaluate from '../components/order/evaluate.vue'
+
+/* 充值 */
+import Recharge from '../components/recharge/recharge.vue'
+import State from '../components/recharge/state.vue'
+import Rule from '../components/recharge/rule.vue'
+
+/* 购物车 */
+import Car from '../components/car/car.vue'
+import Pay from '../components/car/pay.vue'
 
 Vue.use(Router)
 Vue.use(Resource)
-
+Vue.use(apiUrl)
 export default new Router({
   routes: [
     {
@@ -114,12 +145,12 @@ export default new Router({
       component: DetRefrig
     },
     {
-      path: '/cleaning/detailGlass/id',
+      path: '/cleaning/detailGlass/:id',
       name: 'DetGlass',
       component: DetGlass
     },
     {
-      path: '/cleaning/detailLand/id',
+      path: '/cleaning/detailLand/:id',
       name: 'DetLand',
       component: DetLand
     },
@@ -129,7 +160,22 @@ export default new Router({
       component: AppNanny
     },
     {
-      path: '/cleaning/nannyPersonal/id',
+      path: '/cleaning/appClean/:id',
+      name: 'AppClean',
+      component: AppClean
+    },
+    {
+      path: '/cleaning/appRefrig',
+      name: 'AppRefrig',
+      component: AppRefrig
+    },
+    {
+      path: '/cleaning/appLand',
+      name: 'AppLand',
+      component: AppLand
+    },
+    {
+      path: '/cleaning/nannyPersonal/:id',
       name: 'NannyPersonal',
       component: NannyPersonal
     },
@@ -139,19 +185,108 @@ export default new Router({
       component: Evaluate
     },
     {
-      path: '/cleaning/subNanny/:id',
-      name: 'SubNanny',
-      component: SubNanny
+      path: '/cleaning/subPage/:type',
+      name: 'SubmitPage',
+      component: SubmitPage
     },
     {
-      path: '/cleaning/subRefrig',
-      name: 'SubRefrig',
-      component: SubRefrig
+      path: '/cleaning/subState',
+      name: 'SubmitState',
+      component: SubmitState
     },
     {
-      path: '/cleaning/success',
-      name: 'SubSuccess',
-      component: SubSuccess
+      path: '/user/address',
+      name: 'ChooseAddress',
+      component: ChooseAddress
+    },
+    {
+      path: '/user/index',
+      name: 'UserIndex',
+      component: UserIndex
+    },
+    {
+      path: '/user/coupon',
+      name: 'UserCoupon',
+      component: UserCoupon
+    },
+    {
+      path: '/user/balance',
+      name: 'UserBalance',
+      component: UserBalance
+    },
+    {
+      path: '/user/integral',
+      name: 'UserIntegral',
+      component: UserIntegral
+    },
+    {
+      path: '/user/addressAdd',
+      name: 'UserAdAdd',
+      component: UserAdAdd
+    },
+    {
+      path: '/user/addressLocation',
+      name: 'UserAdLocation',
+      component: UserAdLocation
+    },
+    {
+      path: '/user/logistics',
+      name: 'UserLogistics',
+      component: UserLogistics
+    },
+    {
+      path: '/user/giftList',
+      name: 'UserGiftList',
+      component: UserGiftList
+    },
+    {
+      path: '/user/distribution',
+      name: 'UserDistribution',
+      component: UserDistribution
+    },
+    {
+      path: '/user/consumption',
+      name: 'UserConsumption',
+      component: UserConsumption
+    },
+    {
+      path: '/order/list/:type',
+      name: 'OrderList',
+      component: OrderList
+    },
+    {
+      path: '/order/detail',
+      name: 'OrderDetail',
+      component: OrderDetail
+    },
+    {
+      path: '/order/evalute',
+      name: 'OrderEvaluate',
+      component: OrderEvaluate
+    }, {
+      path: '/user/invite',
+      name: 'Invite',
+      component: Invite
+    }, {
+      path: '/recharge/recharge',
+      name: 'Recharge',
+      component: Recharge
+    }, {
+      path: '/recharge/state',
+      name: 'State',
+      component: State
+    }, {
+      path: '/recharge/rule',
+      name: 'Rule',
+      component: Rule
+    }, {
+      path: '/car',
+      name: 'Car',
+      component: Car
+    }, {
+      path: '/pay',
+      name: 'Pay',
+      component: Pay
     }
   ]
 })

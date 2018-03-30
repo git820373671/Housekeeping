@@ -5,9 +5,8 @@
         <img :src=item.src>
       </li>
       <li class="file-item add">
-        <img src="../../assets/images/upLoad.png" class="add-btn"/><input type="file" accept="image/*" ref="file"
-                                                                          @change="fileChanged()"
-                                                                          multiple="multiple">
+        <img src="../../assets/images/upLoad.png" class="add-btn"/>
+        <input type="file" accept="image/*" ref="file" @change="fileChanged()" multiple="multiple">
       </li>
     </ul>
   </div>

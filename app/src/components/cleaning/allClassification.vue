@@ -1,5 +1,6 @@
 <template>
   <div class="h100 cleaning-all">
+    <header-menu :headerData="headerData"></header-menu>
     <ul class="tab-bar" id="selectBox">
       <li v-for="(item,index) in tabData" v-on:click="doList(item.id)" :id="item.id">
         <span>{{item.title}}</span>
@@ -37,10 +38,16 @@
   </div>
 </template>
 <script>
+  import HeaderMenu from '../common/header'
   export default{
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
       return {
-        page: '全部分类',
+        headerData: {
+          title: '全部分类'
+        },
         listData: [],
         tabData: []
       }

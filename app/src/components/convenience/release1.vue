@@ -1,5 +1,6 @@
 <template>
   <div class="h100 convenience">
+    <header-menu :headerData="headerData"></header-menu>
     <ul class="tab-list clear border-no">
       <li>
         <router-link :to="{name: 'ConvenienceRelease2', params: {id: 11}}">
@@ -47,9 +48,17 @@
   </div>
 </template>
 <script>
+  import HeaderMenu from '../common/header'
   export default{
+    components: {
+      HeaderMenu: HeaderMenu
+    },
     data: function () {
-      return {}
+      return {
+        headerData: {
+          title: '发布'
+        }
+      }
     }
   }
 </script>
